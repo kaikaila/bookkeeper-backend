@@ -1,0 +1,77 @@
+[nodemon] starting `node app.js`
+You are listening to port: 3010
+vrfstdMjREJIPpkp7b0CGNHhnhkHmPfCjOIh8CX
+db connected
+----------------START-----------------
+Error occurred inprocessTheReceipt
+{ status: 'fail', message: 'Not Authorized' }
+401
+Object [AxiosHeaders] {
+  date: 'Tue, 10 Dec 2024 06:03:26 GMT',
+  'content-type': 'application/json',
+  'content-length': '47',
+  connection: 'keep-alive',
+  server: 'Apache',
+  'strict-transport-security': 'max-age=63072000; includeSubDomains; preload',
+  'access-control-allow-credentials': 'true',
+  'access-control-allow-methods': 'POST, GET, OPTIONS, DELETE, PUT',
+  'access-control-max-age': '1000',
+  'access-control-allow-headers': 'Access-Control-Allow-Origin, Access-Control-Allow-Headers, Access-Control-Request-Method, Access-Control-Request-Headers, x-requested-with, x-forwarded-for, remote-addr, Content-Type, origin, authorization, accept, client-security-token, client-id, Cache-Control, enctype, Veryfi-Session, x-veryfi-request-signature, x-veryfi-request-timestamp',
+  'cache-control': 'max-age=0, no-cache, no-store, must-revalidate',
+  pragma: 'no-cache',
+  expires: '0',
+  'content-security-policy': "frame-ancestors 'self' veryfi.com *.veryfi.com;",
+  'x-content-type-options': 'nosniff',
+  'referrer-policy': 'no-referrer-when-downgrade'
+}
+{
+  message: 'Request failed with status code 401',
+  name: 'AxiosError',
+  description: undefined,
+  number: undefined,
+  fileName: undefined,
+  lineNumber: undefined,
+  columnNumber: undefined,
+  stack: 'AxiosError: Request failed with status code 401\n' +
+    '    at settle (/Users/yunkaili/fall2024/info202/Bookkeeping/BackEnd/node_modules/axios/dist/node/axios.cjs:2026:12)\n' +
+    '    at IncomingMessage.handleStreamEnd (/Users/yunkaili/fall2024/info202/Bookkeeping/BackEnd/node_modules/axios/dist/node/axios.cjs:3142:11)\n' +
+    '    at IncomingMessage.emit (node:events:530:35)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1698:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)\n' +
+    '    at Axios.request (/Users/yunkaili/fall2024/info202/Bookkeeping/BackEnd/node_modules/axios/dist/node/axios.cjs:4252:41)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'CLIENT-ID': undefined,
+      AUTHORIZATION: undefined,
+      'User-Agent': 'axios/1.7.9',
+      'Content-Length': '52',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'post',
+    baseURL: 'https://api.veryfi.com/api/v8/partner/documents',
+    url: '/documents',
+    data: '{"file_url":"https://i.ibb.co/N7jWr1B/IMG-7686.png"}'
+  },
+  code: 'ERR_BAD_REQUEST',
+  status: 401
+}
+----------------END-----------------
+Request failed with status code 401
