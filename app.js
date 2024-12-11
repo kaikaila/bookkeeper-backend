@@ -12,8 +12,12 @@ const PORT = process.env.PORT;
 
 // middleware
 app.use(express.json()); // 解析请求体中的 JSON 数据
-app.use(cors()); // 启用跨域资源共享（CORS）
-
+// app.use(cors()); // 启用跨域资源共享（CORS）
+app.use(
+  cors({
+    origin: "*", // 允许所有来源，生产环境下需要限制来源
+  })
+);
 // 动态引入路由模块
 readdirSync("./routes").map((route) =>
   app.use("/api/v1", require("./routes/" + route))
